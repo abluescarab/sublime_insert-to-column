@@ -6,9 +6,9 @@ You can bind a key to the command `insert_to_column` to use the script.
 
 ### Arguments
 The script takes only two arguments:
-* `character_to_insert`: required. A character of your choice to insert.
-* `column_index`: optional. If not supplied, it will ask before continuing. The column index to insert to.
-    * Example: if the cursor is at the beginning of a line, a value of `50` will insert 49 characters and place the cursor at column 50
+* `character_to_insert`: _optional._ A character of your choice to insert. If not supplied, it will ask before continuing.
+* `column_index`: _optional._ The column index to insert to. If not supplied, it will ask before continuing.
+    * Example: if the cursor is at the beginning of a line, a value of `20` will insert 19 characters and place the cursor at column 20
 
 ### Keybinding
     {
@@ -17,6 +17,6 @@ The script takes only two arguments:
         "args":
             {
                 "character_to_insert": " ",
-                "column_index": 50
+                "column_index": 20
             }
     }

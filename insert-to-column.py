@@ -1,26 +1,37 @@
 import sublime, sublime_plugin
 
 class InsertToColumnCommand(sublime_plugin.WindowCommand):
-    def run(self, character_to_insert, column_index=0):
+    def run(self, character_to_insert="", column_index=0):
+        # create class-wide variables
+        self.character_to_insert = character_to_insert
+        self.column_index = column_index
+        
         if(len(character_to_insert) == 1):
-            self.character_to_insert = character_to_insert
-
-            if(column_index > 0):
-                self.insert(self.character_to_insert, column_index)
-            else:
-                self.window.show_input_panel(
-                    "Column index:",
-                    "",
-                    self.on_done,
-                    None,
-                    None
-                )
+            self.on_character_to_insert(character_to_insert)
         else:
-            print(__file__ + ": can only insert one character at a time")
-
+            self.window.show_input_panel(
+                "Character to insert:",
+                "",
+                self.on_character_to_insert,
+                None,
+                None)
         pass
 
-    def on_done(self, column_index):
+    def on_character_to_insert(self, character_to_insert):
+        self.character_to_insert = character_to_insert
+
+        if(self.column_index > 0):
+            self.insert(character_to_insert, self.column_index)
+        else:
+            self.window.show_input_panel(
+                "Column index:",
+                "",
+                self.on_column_index,
+                None,
+                None)
+        pass
+
+    def on_column_index(self, column_index):
         self.insert(self.character_to_insert, column_index)
 
     def insert(self, character_to_insert, column_index):

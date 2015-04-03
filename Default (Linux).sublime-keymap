@@ -2,9 +2,6 @@
     {
         "keys": ["ctrl+alt+c"],
         "command": "insert_to_column",
-        "args":
-        {
-            "character_to_insert": " "
-        }
+        // args: { "column_index": 20, "character_to_insert": " " }
     }
 ]
