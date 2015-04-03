@@ -1,0 +1,10 @@
+[
+    {
+        "keys": ["ctrl+alt+c"],
+        "command": "insert_to_column",
+        "args":
+        {
+            "character_to_insert": " "
+        }
+    }
+]
