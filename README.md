@@ -1,5 +1,5 @@
 # Insert to Column
-_Insert to Column_ is a simple package that allows you to insert a character of your choice up to a certain column on all selected lines.
+_Insert to Column_ is a simple package that allows you to insert a character (or characters) of your choice up to a certain column on all selected lines.
 
 ## Command
 You can bind a key to the command `insert_to_column` to use the script.
