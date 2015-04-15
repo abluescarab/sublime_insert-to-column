@@ -61,5 +61,6 @@ class DoInsertToColumnCommand(sublime_plugin.TextCommand):
                 self.view.insert(edit, region.begin(), self.repeat(
                     character_to_insert, count))
 
-    def repeat(self, str, count):
-        return str * count
+    def repeat(self, chars, count):
+        # [:count] handles when the user inputs more than one character
+        return (chars * count)[:count]
