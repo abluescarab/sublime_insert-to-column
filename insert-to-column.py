@@ -6,7 +6,7 @@ class InsertToColumnCommand(sublime_plugin.WindowCommand):
         self.character_to_insert = character_to_insert
         self.column_index = column_index
         
-        if(len(character_to_insert) == 1):
+        if(len(character_to_insert) > 0):
             self.on_character_to_insert(character_to_insert)
         else:
             self.window.show_input_panel(
