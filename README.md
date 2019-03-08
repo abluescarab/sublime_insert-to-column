@@ -5,7 +5,7 @@ _Insert to Column_ is a simple package that allows you to insert a character (or
 The recommended way to install this package is through [Package Control](https://packagecontrol.io/), but you can also download this repository or the `sublime-package` file from the [latest release](https://github.com/abluescarab/sublime_insert-to-column/releases/latest) and drop it into your _Installed Packages_ folder.
 
 ## Command
-You can bind a key to the command `insert_to_column` to use the script.
+You can access "Insert to Column" from the command palette or bind a key to the command `insert_to_column`.
 
 ### Arguments
 The script takes only two arguments:

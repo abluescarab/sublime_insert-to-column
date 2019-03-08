@@ -1,0 +1,8 @@
+[
+    { "caption": "Insert to Column: Default", "command": "insert_to_column" },
+    { "caption": "Insert to Column: Spaces", "command": "insert_to_column", 
+        "args": {
+            "character_to_insert": " "
+        }
+    }
+]
